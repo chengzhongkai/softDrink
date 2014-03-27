@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
@@ -53,6 +54,7 @@ public class Mail extends Activity implements OnClickListener {
 
 		Button send = (Button) findViewById(R.id.send);
 		send.setOnClickListener(this);
+		onClick(send);
 
 	}
 
@@ -101,7 +103,21 @@ class MailSender extends AsyncTask<String, Integer, Boolean> {
 		if (result.booleanValue()) {
 			msg = "mail has sent";
 			Toast.makeText(uiActivity_, msg, Toast.LENGTH_SHORT).show();
+			
+			Intent i;
+			PackageManager manager = uiActivity_.getPackageManager();
+			try {
+			    i = manager.getLaunchIntentForPackage("jp.co.unisys.android.yamadamobile");
+			    if (i == null)
+			        throw new PackageManager.NameNotFoundException();
+			    i.addCategory(Intent.CATEGORY_LAUNCHER);
+			    uiActivity_.startActivity(i);
+			} catch (PackageManager.NameNotFoundException e) {
+
+			}
+			
 			uiActivity_.finish();
+			
 		} else {
 			msg = "can not send mail";
 			Toast.makeText(uiActivity_, msg, Toast.LENGTH_SHORT).show();
