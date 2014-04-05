@@ -14,21 +14,34 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.RatingBar;
-import android.widget.RatingBar.OnRatingBarChangeListener;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 
-
-public class MainActivity extends Activity implements OnClickListener, OnRatingBarChangeListener {
+public class MainActivity extends Activity implements OnClickListener, OnItemSelectedListener {
 	TextView title;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-         title = (TextView)this.findViewById(R.id.title);
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.cnt, android.R.layout.simple_spinner_item);
+        // Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        
+        ArrayAdapter<CharSequence> adapterP = ArrayAdapter.createFromResource(this,
+                R.array.points, android.R.layout.simple_spinner_item);
+        // Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+       
+        
+        title = (TextView)this.findViewById(R.id.title);
         String s =getIMSI();
         title.setText(s);
       
@@ -50,22 +63,39 @@ public class MainActivity extends Activity implements OnClickListener, OnRatingB
         Button b16 = (Button)this.findViewById(R.id.button16);
        
         
-        RatingBar r1= (RatingBar)this.findViewById(R.id.ratingBar1);
-        RatingBar r2= (RatingBar)this.findViewById(R.id.ratingBar2);
-        RatingBar r3= (RatingBar)this.findViewById(R.id.ratingBar3);
-        RatingBar r4= (RatingBar)this.findViewById(R.id.ratingBar4);
-        RatingBar r5= (RatingBar)this.findViewById(R.id.ratingBar5);
-        RatingBar r6= (RatingBar)this.findViewById(R.id.ratingBar6);
-        RatingBar r7= (RatingBar)this.findViewById(R.id.ratingBar7);
-        RatingBar r8= (RatingBar)this.findViewById(R.id.ratingBar8);
-        RatingBar r9= (RatingBar)this.findViewById(R.id.ratingBar9);
-        RatingBar r10= (RatingBar)this.findViewById(R.id.ratingBar10);
-        RatingBar r11= (RatingBar)this.findViewById(R.id.ratingBar11);
-        RatingBar r12= (RatingBar)this.findViewById(R.id.ratingBar12);
-        RatingBar r13= (RatingBar)this.findViewById(R.id.ratingBar13);
-        RatingBar r14= (RatingBar)this.findViewById(R.id.ratingBar14);
-        RatingBar r15= (RatingBar)this.findViewById(R.id.ratingBar15);
-        RatingBar r16= (RatingBar)this.findViewById(R.id.ratingBar16);
+        Spinner r1= (Spinner)this.findViewById(R.id.Spinner1);
+        Spinner r2= (Spinner)this.findViewById(R.id.Spinner2);
+        Spinner r3= (Spinner)this.findViewById(R.id.Spinner3);
+        Spinner r4= (Spinner)this.findViewById(R.id.Spinner4);
+        Spinner r5= (Spinner)this.findViewById(R.id.Spinner5);
+        Spinner r6= (Spinner)this.findViewById(R.id.Spinner6);
+        Spinner r7= (Spinner)this.findViewById(R.id.Spinner7);
+        Spinner r8= (Spinner)this.findViewById(R.id.Spinner8);
+        Spinner r9= (Spinner)this.findViewById(R.id.Spinner9);
+        Spinner r10= (Spinner)this.findViewById(R.id.Spinner10);
+        Spinner r11= (Spinner)this.findViewById(R.id.Spinner11);
+        Spinner r12= (Spinner)this.findViewById(R.id.Spinner12);
+        Spinner r13= (Spinner)this.findViewById(R.id.Spinner13);
+        Spinner r14= (Spinner)this.findViewById(R.id.Spinner14);
+        Spinner r15= (Spinner)this.findViewById(R.id.Spinner15);
+        Spinner r16= (Spinner)this.findViewById(R.id.Spinner16);
+    
+        Spinner rp1= (Spinner)this.findViewById(R.id.SpinnerP1);
+        Spinner rp2= (Spinner)this.findViewById(R.id.SpinnerP2);
+        Spinner rp3= (Spinner)this.findViewById(R.id.SpinnerP3);
+        Spinner rp4= (Spinner)this.findViewById(R.id.SpinnerP4);
+        Spinner rp5= (Spinner)this.findViewById(R.id.SpinnerP5);
+        Spinner rp6= (Spinner)this.findViewById(R.id.SpinnerP6);
+        Spinner rp7= (Spinner)this.findViewById(R.id.SpinnerP7);
+        Spinner rp8= (Spinner)this.findViewById(R.id.SpinnerP8);
+        Spinner rp9= (Spinner)this.findViewById(R.id.SpinnerP9);
+        Spinner rp10= (Spinner)this.findViewById(R.id.SpinnerP10);
+        Spinner rp11= (Spinner)this.findViewById(R.id.SpinnerP11);
+        Spinner rp12= (Spinner)this.findViewById(R.id.SpinnerP12);
+        Spinner rp13= (Spinner)this.findViewById(R.id.SpinnerP13);
+        Spinner rp14= (Spinner)this.findViewById(R.id.SpinnerP14);
+        Spinner rp15= (Spinner)this.findViewById(R.id.SpinnerP15);
+        Spinner rp16= (Spinner)this.findViewById(R.id.SpinnerP16);
         
         
         b1.setOnClickListener(this);
@@ -85,43 +115,113 @@ public class MainActivity extends Activity implements OnClickListener, OnRatingB
         b15.setOnClickListener(this);
         b16.setOnClickListener(this);
         
-        r1.setOnRatingBarChangeListener(this);
-        r2.setOnRatingBarChangeListener(this);
-        r3.setOnRatingBarChangeListener(this);
-        r4.setOnRatingBarChangeListener(this);
-        r5.setOnRatingBarChangeListener(this);
-        r6.setOnRatingBarChangeListener(this);
-        r7.setOnRatingBarChangeListener(this);
-        r8.setOnRatingBarChangeListener(this);
-        r9.setOnRatingBarChangeListener(this);
-        r10.setOnRatingBarChangeListener(this);
-        r11.setOnRatingBarChangeListener(this);
-        r12.setOnRatingBarChangeListener(this);
-        r13.setOnRatingBarChangeListener(this);
-        r14.setOnRatingBarChangeListener(this);
-        r15.setOnRatingBarChangeListener(this);
-        r16.setOnRatingBarChangeListener(this);
         
+        r1.setAdapter(adapter);
+        r2.setAdapter(adapter);
+        r3.setAdapter(adapter);
+        r4.setAdapter(adapter);
+        r5.setAdapter(adapter);
+        r6.setAdapter(adapter);
+        r7.setAdapter(adapter);
+        r8.setAdapter(adapter);
+        r9.setAdapter(adapter);
+        r10.setAdapter(adapter);
+        r11.setAdapter(adapter);
+        r12.setAdapter(adapter);
+        r13.setAdapter(adapter);
+        r14.setAdapter(adapter);
+        r15.setAdapter(adapter);
+        r16.setAdapter(adapter);
+        
+        rp1.setAdapter(adapterP);
+        rp2.setAdapter(adapterP);
+        rp3.setAdapter(adapterP);
+        rp4.setAdapter(adapterP);
+        rp5.setAdapter(adapterP);
+        rp6.setAdapter(adapterP);
+        rp7.setAdapter(adapterP);
+        rp8.setAdapter(adapterP);
+        rp9.setAdapter(adapterP);
+        rp10.setAdapter(adapterP);
+        rp11.setAdapter(adapterP);
+        rp12.setAdapter(adapterP);
+        rp13.setAdapter(adapterP);
+        rp14.setAdapter(adapterP);
+        rp15.setAdapter(adapterP);
+        rp16.setAdapter(adapterP);
+        
+        r1.setOnItemSelectedListener(this);
+        r1.setOnItemSelectedListener(this);
+        r2.setOnItemSelectedListener(this);
+        r3.setOnItemSelectedListener(this);
+        r4.setOnItemSelectedListener(this);
+        r5.setOnItemSelectedListener(this);
+        r6.setOnItemSelectedListener(this);
+        r7.setOnItemSelectedListener(this);
+        r8.setOnItemSelectedListener(this);
+        r9.setOnItemSelectedListener(this);
+        r10.setOnItemSelectedListener(this);
+        r11.setOnItemSelectedListener(this);
+        r12.setOnItemSelectedListener(this);
+        r13.setOnItemSelectedListener(this);
+        r14.setOnItemSelectedListener(this);
+        r15.setOnItemSelectedListener(this);
+        r16.setOnItemSelectedListener(this);
+        
+        rp1.setOnItemSelectedListener(this);
+        rp1.setOnItemSelectedListener(this);
+        rp2.setOnItemSelectedListener(this);
+        rp3.setOnItemSelectedListener(this);
+        rp4.setOnItemSelectedListener(this);
+        rp5.setOnItemSelectedListener(this);
+        rp6.setOnItemSelectedListener(this);
+        rp7.setOnItemSelectedListener(this);
+        rp8.setOnItemSelectedListener(this);
+        rp9.setOnItemSelectedListener(this);
+        rp10.setOnItemSelectedListener(this);
+        rp11.setOnItemSelectedListener(this);
+        rp12.setOnItemSelectedListener(this);
+        rp13.setOnItemSelectedListener(this);
+        rp14.setOnItemSelectedListener(this);
+        rp15.setOnItemSelectedListener(this);
+        rp16.setOnItemSelectedListener(this);
         
         SharedPreferences prefs = this.getSharedPreferences(
   		      "prefs",0);
+
+        r1.setSelection(prefs.getInt(Integer.toString(r1.getId()), 0));
+        r2.setSelection(prefs.getInt(Integer.toString(r2.getId()), 0));
+        r3.setSelection(prefs.getInt(Integer.toString(r3.getId()), 0));
+        r4.setSelection(prefs.getInt(Integer.toString(r4.getId()), 0));
+        r5.setSelection(prefs.getInt(Integer.toString(r5.getId()), 0));
+        r6.setSelection(prefs.getInt(Integer.toString(r6.getId()), 0));
+        r7.setSelection(prefs.getInt(Integer.toString(r7.getId()), 0));
+        r8.setSelection(prefs.getInt(Integer.toString(r8.getId()), 0));
+        r9.setSelection(prefs.getInt(Integer.toString(r9.getId()), 0));
+        r10.setSelection(prefs.getInt(Integer.toString(r10.getId()), 0));
+        r11.setSelection(prefs.getInt(Integer.toString(r11.getId()), 0));
+        r12.setSelection(prefs.getInt(Integer.toString(r12.getId()), 0));
+        r13.setSelection(prefs.getInt(Integer.toString(r13.getId()), 0));
+        r14.setSelection(prefs.getInt(Integer.toString(r14.getId()), 0));
+        r15.setSelection(prefs.getInt(Integer.toString(r15.getId()), 0));
+        r16.setSelection(prefs.getInt(Integer.toString(r16.getId()), 0));
         
-        r1.setRating(prefs.getFloat(Integer.toString(r1.getId()), 0));
-        r2.setRating(prefs.getFloat(Integer.toString(r2.getId()), 0));
-        r3.setRating(prefs.getFloat(Integer.toString(r3.getId()), 0));
-        r4.setRating(prefs.getFloat(Integer.toString(r4.getId()), 0));
-        r5.setRating(prefs.getFloat(Integer.toString(r5.getId()), 0));
-        r6.setRating(prefs.getFloat(Integer.toString(r6.getId()), 0));
-        r7.setRating(prefs.getFloat(Integer.toString(r7.getId()), 0));
-        r8.setRating(prefs.getFloat(Integer.toString(r8.getId()), 0));
-        r9.setRating(prefs.getFloat(Integer.toString(r9.getId()), 0));
-        r10.setRating(prefs.getFloat(Integer.toString(r10.getId()), 0));
-        r11.setRating(prefs.getFloat(Integer.toString(r11.getId()), 0));
-        r12.setRating(prefs.getFloat(Integer.toString(r12.getId()), 0));
-        r13.setRating(prefs.getFloat(Integer.toString(r13.getId()), 0));
-        r14.setRating(prefs.getFloat(Integer.toString(r14.getId()), 0));
-        r15.setRating(prefs.getFloat(Integer.toString(r15.getId()), 0));
-        r16.setRating(prefs.getFloat(Integer.toString(r16.getId()), 0));
+        rp1.setSelection(prefs.getInt(Integer.toString(rp1.getId()), 0));
+        rp2.setSelection(prefs.getInt(Integer.toString(rp2.getId()), 0));
+        rp3.setSelection(prefs.getInt(Integer.toString(rp3.getId()), 0));
+        rp4.setSelection(prefs.getInt(Integer.toString(rp4.getId()), 0));
+        rp5.setSelection(prefs.getInt(Integer.toString(rp5.getId()), 0));
+        rp6.setSelection(prefs.getInt(Integer.toString(rp6.getId()), 0));
+        rp7.setSelection(prefs.getInt(Integer.toString(rp7.getId()), 0));
+        rp8.setSelection(prefs.getInt(Integer.toString(rp8.getId()), 0));
+        rp9.setSelection(prefs.getInt(Integer.toString(rp9.getId()), 0));
+        rp10.setSelection(prefs.getInt(Integer.toString(rp10.getId()), 0));
+        rp11.setSelection(prefs.getInt(Integer.toString(rp11.getId()), 0));
+        rp12.setSelection(prefs.getInt(Integer.toString(rp12.getId()), 0));
+        rp13.setSelection(prefs.getInt(Integer.toString(rp13.getId()), 0));
+        rp14.setSelection(prefs.getInt(Integer.toString(rp14.getId()), 0));
+        rp15.setSelection(prefs.getInt(Integer.toString(rp15.getId()), 0));
+        rp16.setSelection(prefs.getInt(Integer.toString(rp16.getId()), 0));
         
     }
 
@@ -362,11 +462,21 @@ public void onClick(View view) {
 }
 
 
+
+
+
 @Override
-public void onRatingChanged(RatingBar arg0, float arg1, boolean arg2) {
+public void onItemSelected(AdapterView<?> arg0, View arg1, int pos, long id) {
 	SharedPreferences prefs = this.getSharedPreferences(
 		      "prefs",0);
-	prefs.edit().putFloat(Integer.toString(arg0.getId()), arg1).commit();
+	prefs.edit().putInt(Integer.toString(arg0.getId()), pos).commit();
+	
+}
+
+
+@Override
+public void onNothingSelected(AdapterView<?> arg0) {
+	// TODO Auto-generated method stub
 	
 }
 
