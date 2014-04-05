@@ -13,7 +13,8 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:text="@string/hello_world"
+        android:textSize="30sp" />
 
     <ScrollView
         android:id="@+id/scrollView1"
@@ -36,12 +37,15 @@
                     android:layout_marginLeft="14dp"
                     android:text="Button1" />
 
-                <RatingBar
-                    android:id="@+id/ratingBar1"
+                <Spinner
+                    android:id="@+id/Spinner1"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:numStars="4"
-                    android:stepSize="1" />
+                    android:layout_height="wrap_content"/>
+                
+                <Spinner
+                    android:id="@+id/SpinnerP1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
             </LinearLayout>
 
             <LinearLayout
@@ -55,12 +59,14 @@
                     android:layout_marginLeft="14dp"
                     android:text="Button2" />
 
-                <RatingBar
-                    android:id="@+id/ratingBar2"
+                <Spinner
+                    android:id="@+id/Spinner2"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:numStars="4"
-                    android:stepSize="1" />
+                    android:layout_height="wrap_content"/>
+                <Spinner
+                    android:id="@+id/SpinnerP2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
             </LinearLayout>
 
             <LinearLayout
@@ -74,12 +80,16 @@
                     android:layout_marginLeft="14dp"
                     android:text="Button3" />
 
-                <RatingBar
-                    android:id="@+id/ratingBar3"
+                <Spinner
+                    android:id="@+id/Spinner3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:numStars="4"
                     android:stepSize="1" />
+                <Spinner
+                    android:id="@+id/SpinnerP3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
             </LinearLayout>
 
             <LinearLayout
@@ -93,12 +103,16 @@
                     android:layout_marginLeft="14dp"
                     android:text="Button4" />
 
-                <RatingBar
-                    android:id="@+id/ratingBar4"
+                <Spinner
+                    android:id="@+id/Spinner4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:numStars="4"
                     android:stepSize="1" />
+                <Spinner
+                    android:id="@+id/SpinnerP4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
             </LinearLayout>
 
             <LinearLayout
@@ -112,12 +126,16 @@
                     android:layout_marginLeft="14dp"
                     android:text="Button5" />
 
-                <RatingBar
-                    android:id="@+id/ratingBar5"
+                <Spinner
+                    android:id="@+id/Spinner5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:numStars="4"
                     android:stepSize="1" />
+                <Spinner
+                    android:id="@+id/SpinnerP5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
             </LinearLayout>
 
             <LinearLayout
@@ -131,12 +149,16 @@
                     android:layout_marginLeft="14dp"
                     android:text="Button6" />
 
-                <RatingBar
-                    android:id="@+id/ratingBar6"
+                <Spinner
+                    android:id="@+id/Spinner6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:numStars="4"
                     android:stepSize="1" />
+                <Spinner
+                    android:id="@+id/SpinnerP6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
             </LinearLayout>
 
             <LinearLayout
@@ -150,12 +172,16 @@
                     android:layout_marginLeft="14dp"
                     android:text="Button7" />
 
-                <RatingBar
-                    android:id="@+id/ratingBar7"
+                <Spinner
+                    android:id="@+id/Spinner7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:numStars="4"
                     android:stepSize="1" />
+                <Spinner
+                    android:id="@+id/SpinnerP7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
             </LinearLayout>
 
             <LinearLayout
@@ -169,12 +195,16 @@
                     android:layout_marginLeft="14dp"
                     android:text="Button8" />
 
-                <RatingBar
-                    android:id="@+id/ratingBar8"
+                <Spinner
+                    android:id="@+id/Spinner8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:numStars="4"
                     android:stepSize="1" />
+                <Spinner
+                    android:id="@+id/SpinnerP8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
             </LinearLayout>
 
             <LinearLayout
@@ -188,12 +218,16 @@
                     android:layout_marginLeft="14dp"
                     android:text="Button9" />
 
-                <RatingBar
-                    android:id="@+id/ratingBar9"
+                <Spinner
+                    android:id="@+id/Spinner9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:numStars="4"
                     android:stepSize="1" />
+                <Spinner
+                    android:id="@+id/SpinnerP9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
             </LinearLayout>
 
             <LinearLayout
@@ -207,12 +241,16 @@
                     android:layout_marginLeft="14dp"
                     android:text="Button10" />
 
-                <RatingBar
-                    android:id="@+id/ratingBar10"
+                <Spinner
+                    android:id="@+id/Spinner10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:numStars="4"
                     android:stepSize="1" />
+                <Spinner
+                    android:id="@+id/SpinnerP10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
             </LinearLayout>
 
             <LinearLayout
@@ -226,12 +264,16 @@
                     android:layout_marginLeft="14dp"
                     android:text="Button11" />
 
-                <RatingBar
-                    android:id="@+id/ratingBar11"
+                <Spinner
+                    android:id="@+id/Spinner11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:numStars="4"
                     android:stepSize="1" />
+                <Spinner
+                    android:id="@+id/SpinnerP11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
             </LinearLayout>
 
             <LinearLayout
@@ -245,12 +287,16 @@
                     android:layout_marginLeft="14dp"
                     android:text="Button12" />
 
-                <RatingBar
-                    android:id="@+id/ratingBar12"
+                <Spinner
+                    android:id="@+id/Spinner12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:numStars="4"
                     android:stepSize="1" />
+                <Spinner
+                    android:id="@+id/SpinnerP12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
             </LinearLayout>
 
             <LinearLayout
@@ -264,12 +310,16 @@
                     android:layout_marginLeft="14dp"
                     android:text="Button13" />
 
-                <RatingBar
-                    android:id="@+id/ratingBar13"
+                <Spinner
+                    android:id="@+id/Spinner13"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:numStars="4"
                     android:stepSize="1" />
+                <Spinner
+                    android:id="@+id/SpinnerP13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
             </LinearLayout>
 
             <LinearLayout
@@ -283,12 +333,16 @@
                     android:layout_marginLeft="14dp"
                     android:text="Button14" />
 
-                <RatingBar
-                    android:id="@+id/ratingBar14"
+                <Spinner
+                    android:id="@+id/Spinner14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:numStars="4"
                     android:stepSize="1" />
+                <Spinner
+                    android:id="@+id/SpinnerP14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
             </LinearLayout>
 
             <LinearLayout
@@ -302,12 +356,14 @@
                     android:layout_marginLeft="14dp"
                     android:text="Button15" />
 
-                <RatingBar
-                    android:id="@+id/ratingBar15"
+                <Spinner
+                    android:id="@+id/Spinner15"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:numStars="4"
-                    android:stepSize="1" />
+                    android:layout_height="wrap_content"/>
+                <Spinner
+                    android:id="@+id/SpinnerP15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
             </LinearLayout>
 
             <LinearLayout
@@ -321,12 +377,14 @@
                     android:layout_marginLeft="14dp"
                     android:text="Button16" />
 
-                <RatingBar
-                    android:id="@+id/ratingBar16"
+                <Spinner
+                    android:id="@+id/Spinner16"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:numStars="4"
-                    android:stepSize="1" />
+                    android:layout_height="wrap_content"/>
+                <Spinner
+                    android:id="@+id/SpinnerP16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
